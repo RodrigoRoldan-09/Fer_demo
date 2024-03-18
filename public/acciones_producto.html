@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Acciones de Producto</title>
+</head>
+<body>
+    <h1>Acciones de Producto</h1>
+    <table id="acciones-table">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Acciones</th>
+        </tr>
+    </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url: '/mostrarProductos',
+                type: 'GET',
+                success: function(data) {
+                    data.forEach(producto => {
+                        $('#acciones-table').append(`<tr><td>${producto.pro_id}</td><td>${producto.pro_nombre}</td><td>${producto.pro_precio}</td><td>${producto.pro_cantidad}</td><td><form action='/accionesProducto' method='POST'><input type='hidden' name='id' value='${producto.pro_id}'><input type='submit' name='accion' value='Borrar'><input type='submit' name='accion' value='Modificar'></form></td></tr>`);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
