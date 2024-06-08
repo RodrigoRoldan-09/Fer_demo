@@ -4,17 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <title>Acciones de Producto</title>
+    <style>
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #cccccc; /* Borde gris claro */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para celdas */
+th, td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #e6e6e6; /* Borde inferior gris claro */
+    font-size: 1em;
+    color: #333; /* Texto gris oscuro */
+}
+
+/* Estilos para el encabezado */
+th {
+    background-color: #007bff; /* Fondo azul */
+    color: #ffffff; /* Texto blanco */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+/* Filas alternas */
+tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Fondo gris claro alternativo */
+}
+
+/* Estilo al pasar el mouse */
+tr:hover {
+    background-color: #f1f1f1; /* Fondo gris claro al pasar el mouse */
+}
+
+/* Primera columna */
+td:first-child {
+    font-weight: bold;
+    color: #404b57; /* Texto azul */
+}
+
+/* Última columna */
+td:last-child {
+    font-style: italic;
+    color: #555; /* Texto gris */
+}
+
+    
+</style>
 </head>
 <body>
     <h1>Acciones de Producto</h1>
-    <table id="acciones-table">
+    <table id="acciones-table" >
         <tr>
             <th>ID</th>
+            <th>N° Estudiante</th>
             <th>Nombre</th>
-            <th>Precio</th>
-            <th>Cantidad</th>
-            <th>Acciones</th>
+            <th>Edad</th>
+            <th>Faltas</th>
         </tr>
     </table>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
